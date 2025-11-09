@@ -5,4 +5,13 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   plugins: [tailwindcss(), reactRouter(), tsconfigPaths()],
+  server: {
+    allowedHosts: [
+      "florinda-histoid-hermila.ngrok-free.dev",
+      ".ngrok-free.dev",
+      ".ngrok.io",
+      ".ngrok.app",
+    ],
+    host: true, // Allow external connections
+  },
 });
